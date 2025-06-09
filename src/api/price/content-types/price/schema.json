@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prices",
+  "info": {
+    "singularName": "price",
+    "pluralName": "prices",
+    "displayName": "Price"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "service": {
+      "type": "string",
+      "required": true
+    },
+    "model_conditionair": {
+      "type": "string"
+    },
+    "price": {
+      "type": "biginteger"
+    }
+  }
+}
