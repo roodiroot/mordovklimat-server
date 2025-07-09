@@ -21,7 +21,11 @@ export default factories.createCoreController(
           }
         );
 
-        ctx.body = entity[0] || null;
+        if (entity.length === 0) {
+          return ctx.notFound(`Product with slug=${slug} not found`);
+        }
+
+        ctx.body = entity[0];
 
         return (ctx.body = entity[0] || null);
       } catch (error) {
