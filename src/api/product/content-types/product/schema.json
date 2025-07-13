@@ -45,6 +45,38 @@
       "relation": "manyToOne",
       "target": "api::brand.brand",
       "inversedBy": "products"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "btu_capacity": {
+      "type": "string"
+    },
+    "refrigerant_type": {
+      "type": "string"
+    },
+    "cooling_power": {
+      "type": "string"
+    },
+    "heating_power": {
+      "type": "string"
+    },
+    "operation_modes": {
+      "type": "string"
+    },
+    "min_noise_level": {
+      "type": "string"
+    },
+    "series": {
+      "type": "string"
+    },
+    "max_line_length": {
+      "type": "string"
+    },
+    "caracteristic": {
+      "type": "component",
+      "repeatable": true,
+      "component": "characteristic.characteristic"
     }
   }
 }

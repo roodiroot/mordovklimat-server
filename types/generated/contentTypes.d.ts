@@ -468,10 +468,18 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   };
   attributes: {
     brand: Schema.Attribute.Relation<'manyToOne', 'api::brand.brand'>;
+    btu_capacity: Schema.Attribute.String;
+    caracteristic: Schema.Attribute.Component<
+      'characteristic.characteristic',
+      true
+    >;
     compressor: Schema.Attribute.String;
+    cooling_power: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.RichText;
+    heating_power: Schema.Attribute.String;
     images: Schema.Attribute.Media<'images', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -479,9 +487,14 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'api::product.product'
     > &
       Schema.Attribute.Private;
+    max_line_length: Schema.Attribute.String;
+    min_noise_level: Schema.Attribute.String;
     name: Schema.Attribute.String & Schema.Attribute.Unique;
+    operation_modes: Schema.Attribute.String;
     price: Schema.Attribute.BigInteger;
     publishedAt: Schema.Attribute.DateTime;
+    refrigerant_type: Schema.Attribute.String;
+    series: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
     square: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
