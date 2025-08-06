@@ -491,6 +491,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     max_line_length: Schema.Attribute.String;
     min_noise_level: Schema.Attribute.String;
     name: Schema.Attribute.String & Schema.Attribute.Unique;
+    old_price: Schema.Attribute.BigInteger;
     operation_modes: Schema.Attribute.String;
     price: Schema.Attribute.BigInteger;
     publishedAt: Schema.Attribute.DateTime;
